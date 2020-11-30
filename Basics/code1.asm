@@ -1,0 +1,24 @@
+CODE SEGMENT
+ASSUME CS:CODE, DS:CODE
+
+ORG 1000H
+MOV AX, CS
+MOV DS, AX
+
+MOV AX, 5; AX = 5
+MOV BX, 7; BX = 7
+
+XCHG AX, BX; AX = 7, BX = 5
+
+INC AX; AX = AX + 1 = 7+1 = 8
+DEC BX; BX = BX - 1 = 5-1 = 4
+
+ADD AX, BX; AX + BX => AX, AX = 8 + 4 = 12
+SUB AX, BX; AX - BX => AX, AX = 12 - 4 = 8
+
+NEG BX; NEG(4)
+
+HLT; INT 3
+
+CODE ENDS
+END

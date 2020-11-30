@@ -1,0 +1,18 @@
+CODE SEGMENT
+ASSUME CS:CODE, DS:CODE
+
+ORG 1000H
+MOV AX, CS
+MOV DS, AX
+
+; Clearing the contents of a register
+
+MOV AX, 70H;    0000 0000 0111 0000
+AND AX, 0H      0000 0000 0000 0000
+                0000 0000 0000 0000
+
+MOV AX, 0H
+XOR AX, AX
+
+CODE ENDS
+END
