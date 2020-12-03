@@ -1,0 +1,31 @@
+CODE SEGMENT
+ASSUME CS:CODE, DS:CODE
+
+ORG 1000H
+MOV AX, CS
+MOV DS, AX
+
+; AH     = 1010 0101 (A5H)
+; Mask   = 1000 0000 (80H)
+; Test   = 1000 0000
+; ZF = 0
+
+MOV AH, A5H
+TEST AH, 80H
+JZ NEXT
+
+NEXT: ...
+
+
+; AH     = 0010 0101
+; Mask   = 1000 0000
+; Test   = 0000 0000
+; ZF = 1     
+
+
+
+TEST 
+
+
+CODE ENDS
+END
